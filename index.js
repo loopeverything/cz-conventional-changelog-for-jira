@@ -57,7 +57,11 @@ const options = {
   jiraPrefix:
     process.env.CZ_JIRA_PREFIX ||
     config.jiraPrefix ||
-    defaults.jiraPrefix
+    defaults.jiraPrefix,
+  jiraUrl:
+    process.env.CZ_JIRA_URL ||
+    config.jiraUrl ||
+    defaults.jiraUrl
 };
 
 (function(options) {
