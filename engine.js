@@ -212,12 +212,18 @@ module.exports = function(options) {
         // parentheses are only needed when a scope is present
         var scope = answers.scope ? '(' + answers.scope + ')' : '';
         var jira = answers.jira ? answers.jira + ' ' : '';
+        var jiraUrl = answers.jira && options.jiraUrl ? options.jiraUrl + answers.jira : false;
 
         // Hard limit this line in the validate
         const head = answers.type + scope + ': ' + jira + answers.subject;
 
         // Wrap these lines at options.maxLineWidth characters
-        var body = answers.body ? wrap(answers.body, wrapOptions) : false;
+        let body;
+        if (jiraUrl) {
+          body = answers.body ? wrap((answers.body + '\n\n' + jiraUrl), wrapOptions) : jiraUrl;
+        } else {
+          body = answers.body ? wrap(answers.body, wrapOptions) : false;
+        }
 
         // Apply breaking change prefix, removing it if already present
         var breaking = answers.breaking ? answers.breaking.trim() : '';
