@@ -1,5 +1,5 @@
 {
-  "name": "@loopeverything/cz-conventional-changelog-for-jira",
+  "name": "@loopeverything/cz-conventional-changelog-jira-links",
   "version": "1.0.0",
   "description": "Commitizen adapter following the conventional-changelog format and also asking for JIRA issue.",
   "main": "index.js",
@@ -8,10 +8,10 @@
     "test": "mocha *.test.js",
     "format": "prettier --write *.js"
   },
-  "homepage": "https://github.com/loopeverything/cz-conventional-changelog-for-jira",
+  "homepage": "https://github.com/loopeverything/cz-conventional-changelog-jira-links",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loopeverything/cz-conventional-changelog-for-jira.git"
+    "url": "https://github.com/loopeverything/cz-conventional-changelog-jira-links.git"
   },
   "engineStrict": true,
   "engines": {
