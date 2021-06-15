@@ -1,23 +1,24 @@
-# cz-conventional-changelog-for-jira
+# cz-conventional-changelog-jira-links
 
 Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard and also prompts for a mandatory JIRA issue.
 
-[![npm version](https://img.shields.io/npm/v/@digitalroute/cz-conventional-changelog-for-jira.svg?style=flat-square)](https://www.npmjs.org/package/@digitalroute/cz-conventional-changelog-for-jira)
-[![npm downloads](https://img.shields.io/npm/dm/@digitalroute/cz-conventional-changelog-for-jira.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@digitalroute/cz-conventional-changelog-for-jira&from=2015-08-01)
-[![Build Status](https://img.shields.io/travis/digitalroute/cz-conventional-changelog-for-jira.svg?style=flat-square)](https://travis-ci.org/digitalroute/cz-conventional-changelog-for-jira)
+Adds link to Jira ticket in the commit body for [https://github.com/digitalroute/cz-conventional-changelog-for-jira](https://github.com/digitalroute/cz-conventional-changelog-for-jira)
+
+[![npm version](https://img.shields.io/npm/v/@loopeverything/cz-conventional-changelog-jira-links.svg?style=flat-square)](https://www.npmjs.org/package/@loopeverything/cz-conventional-changelog-jira-links)
+[![npm downloads](https://img.shields.io/npm/dm/@loopeverything/cz-conventional-changelog-jira-links.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@loopeverything/cz-conventional-changelog-jira-links&from=2015-08-01)
 
 ## Features
 
-- Works seamlessly with semantic-release 🚀
 - Works seamlessly with Jira smart commits
 - Automatically detects the Jira issue from the branch name
+- Adds link to the Jira ticket in the commit body
 
 ## Quickstart
 
 ### Installation
 
 ```bash
-npm install commitizen @digitalroute/cz-conventional-changelog-for-jira
+npm install commitizen @loopeverything/cz-conventional-changelog-jira-links
 ```
 
 and then add the following to package.json:
@@ -29,19 +30,19 @@ and then add the following to package.json:
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira"
+      "path": "./node_modules/@loopeverything/cz-conventional-changelog-jira-links"
     }
   }
 }
 ```
 
-### Usage
+<!-- ### Usage
 
-![Gif of terminal when using cz-conventional-changelog-for-jira](https://raw.githubusercontent.com/digitalroute/cz-conventional-changelog-for-jira/master/images/demo.gif)
+![Gif of terminal when using cz-conventional-changelog-for-jira](https://raw.githubusercontent.com/digitalroute/cz-conventional-changelog-for-jira/master/images/demo.gif) -->
 
 ## Configuration
 
-Like commitizen, you can specify the configuration of cz-conventional-changelog-for-jira through the package.json's `config.commitizen` key, or with environment variables.
+Like commitizen, you can specify the configuration of cz-conventional-changelog-jira-links through the package.json's `config.commitizen` key, or with environment variables.
 
 | Environment variable | package.json   | Default   | Description                                                                                                                                                           |
 | -------------------- | -------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,9 +67,9 @@ Alternatively, if you want to create your own profile, you can use the _configur
 Here is an example:
 **./index.js**
 ```javascript
-const custom = require('@digitalroute/cz-conventional-changelog-for-jira/configurable');
+const custom = require('@loopeverything/cz-conventional-changelog-jira-links/configurable');
 // You can do this optionally if you want to extend the commit types
-const defaultTypes = require('@digitalroute/cz-conventional-changelog-for-jira/types');
+const defaultTypes = require('@loopeverything/cz-conventional-changelog-jira-links/types');
 
 module.exports = custom({
   types: {
